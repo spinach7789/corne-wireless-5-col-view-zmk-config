@@ -257,6 +257,7 @@
         };
 
         Special {
+display-name = "Special";
             bindings = <
 &trans  &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp DOLLAR       &kp PERCENT   &kp LCTRL             &trans                   &trans  &trans  &trans  &trans  &trans  &trans
