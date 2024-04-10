@@ -195,18 +195,20 @@
         compatible = "zmk,keymap";
 
         QWERTY {
-display-name = "QWERTY";   
-bindings = <
-&trans  &TD_ESC           &kp W           &kp E             &kp R        &kp T        &kp Y      &kp U          &kp I             &kp O           &TD_DASH   &trans
-&trans  &TD_Equal         &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G        &kp H      &hm LCTRL J    &hm LEFT_SHIFT K  &hm LEFT_ALT L  &TD_CHEAT  &trans
-&trans  &hm LEFT_SHIFT Z  &kp X           &kp C             &kp V        &kp B        &kp N      &kp M          &kp COMMA         &kp DOT         &TD_QUOTE  &trans
-                                          &lt 3 TAB         &lt 2 LANG1  &kp SPACE    &kp ENTER  &kp BACKSPACE  &NM 1 1
+            display-name = "QWERTY";
+            bindings = <
+&trans  &hm ESC Q  &kp W           &kp E             &kp R        &kp T        &kp Y      &kp U          &kp I             &kp O           &TD_DASH   &trans
+&trans  &TD_Equal  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G        &kp H      &hm LCTRL J    &hm LEFT_SHIFT K  &hm LEFT_ALT L  &TD_CHEAT  &trans
+&trans  &kp Z      &kp X           &kp C             &kp V        &kp B        &kp N      &kp M          &kp COMMA         &kp DOT         &TD_QUOTE  &trans
+                                   &lt 3 TAB         &lt 2 LANG1  &kp SPACE    &kp ENTER  &kp BACKSPACE  &NM 1 1
             >;
+
+            label = "QWERTY";
         };
 
         Num {
-display-name = "Num";             
-bindings = <
+            display-name = "Num";
+            bindings = <
 &trans  &kp ESC  &AS LS(NUMBER_1) NUMBER_1  &AS LS(NUMBER_2) NUMBER_2  &AS LS(NUMBER_3) NUMBER_3  &AS LS(EQUAL) EQUAL                    &none   &none      &none        &none     &trans  &trans
 &trans  &kp TAB  &AS LS(NUMBER_4) NUMBER_4  &AS LS(NUMBER_5) NUMBER_5  &AS LS(NUMBER_6) NUMBER_6  &AS LS(LEFT_BRACKET) LEFT_BRACKET      &none   &AutoCtrl  &AutoSwitch  &AutoAlt  &trans  &trans
 &trans  &none    &AS LS(NUMBER_7) NUMBER_7  &AS LS(NUMBER_8) NUMBER_8  &AS LS(NUMBER_9) NUMBER_9  &AS LS(RIGHT_BRACKET) RIGHT_BRACKET    &none   &none      &trans       &trans    &trans  &trans
@@ -215,8 +217,8 @@ bindings = <
         };
 
         Nav {
-display-name = "Nav";   
-bindings = <
+            display-name = "Nav";
+            bindings = <
 &trans  &bt BT_SEL 3  &trans        &trans          &kp LC(LEFT_SHIFT)  &trans    &kp LC(F)   &kp LC(Z)       &kp UP     &kp LC(Y)  &bt BT_SEL 0  &trans
 &trans  &bt BT_SEL 4  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL           &trans    &kp END     &kp LEFT_ARROW  &kp DOWN   &kp RIGHT  &bt BT_SEL 1  &trans
 &trans  &none         &trans        &trans          &trans              &trans    &kp INSERT  &kp LC(C)       &kp LC(V)  &kp LC(X)  &bt BT_SEL 2  &trans
@@ -225,8 +227,8 @@ bindings = <
         };
 
         Function {
-display-name = "Function";             
-bindings = <
+            display-name = "Function";
+            bindings = <
 &trans  &trans  &trans        &trans          &trans     &StopWork    &kp F1  &kp F2   &kp F3   &kp F4   &kp SQT       &trans
 &trans  &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &trans       &kp F5  &kp F6   &kp F7   &kp F8   &kp INSERT    &trans
 &trans  &trans  &trans        &trans          &trans     &trans       &kp F9  &kp F10  &kp F11  &kp F12  &kp LEFT_WIN  &trans
