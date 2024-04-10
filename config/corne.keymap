@@ -16,11 +16,11 @@
             flavor = "tap-preferred";
         };
 
-        TD_ESC: TD_ESC {
+        TD_NUM: TD_NUM {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_ESC";
+            label = "TD_NUM";
             #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp ESC>;
+            bindings = <&kp LEFT_SHIFT>, <&mo 1>;
 
             tapping-term-ms = <350>;
         };
@@ -215,7 +215,7 @@
 &trans  &hm ESC Q  &kp W           &kp E             &kp R        &kp T        &kp Y      &kp U          &kp I             &kp O           &TD_DASH   &trans
 &trans  &TD_Equal  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G        &kp H      &hm LCTRL J    &hm LEFT_SHIFT K  &hm LEFT_ALT L  &TD_CHEAT  &trans
 &trans  &kp Z      &kp X           &kp C             &kp V        &kp B        &kp N      &kp M          &kp COMMA         &kp DOT         &TD_QUOTE  &trans
-                                   &lt 3 TAB         &lt 2 LANG1  &kp SPACE    &kp ENTER  &kp BACKSPACE  &NM 1 1
+                                   &lt 3 TAB         &lt 2 LANG1  &kp SPACE    &kp ENTER  &kp BACKSPACE  &TD_NUM
             >;
 
             label = "QWERTY";
