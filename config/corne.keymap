@@ -209,6 +209,21 @@
 
             label = "AUTOALT";
         };
+
+        TestStart: TestStart {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F1>,
+                <&macro_wait_time 50>,
+                <&kp SQT>,
+                <&macro_wait_time 50>,
+                <&kp G &kp O &kp D &kp T &kp E &kp S &kp T>,
+                <&macro_wait_time 50>,
+                <&kp PLUS &kp PLUS &kp PLUS &kp PLUS &kp PLUS>;
+
+            label = "TESTSTART";
+        };
     };
 
     keymap {
@@ -229,9 +244,9 @@
         Num {
             display-name = "Num";
             bindings = <
-&trans  &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL            &kp PLUS   &none      &none           &none          &trans  &trans
-&trans  &kp TAB  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET     &kp MINUS  &kp LCTRL  &kp LEFT_SHIFT  &kp RIGHT_ALT  &trans  &trans
-&trans  &none    &kp N7        &kp NUMBER_8  &kp N9        &kp RIGHT_BRACKET    &none      &none      &trans          &trans         &trans  &trans
+&trans  &kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL            &kp PLUS   &none      &none           &none         &trans  &trans
+&trans  &kp TAB  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT_BRACKET     &kp MINUS  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &trans  &trans
+&trans  &none    &kp N7        &kp NUMBER_8  &kp N9        &kp RIGHT_BRACKET    &none      &none      &trans          &trans        &trans  &trans
                                &kp NUMBER_0  &mo 2         &trans               &trans     &trans     &to 0
             >;
         };
@@ -249,20 +264,19 @@
         Function {
             display-name = "Function";
             bindings = <
-&trans  &trans  &trans        &trans          &trans     &StopWork    &kp F1  &kp F2   &kp F3   &kp F4   &kp SQT       &trans
-&trans  &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &trans       &kp F5  &kp F6   &kp F7   &kp F8   &kp INSERT    &trans
-&trans  &trans  &trans        &trans          &trans     &trans       &kp F9  &kp F10  &kp F11  &kp F12  &kp LEFT_WIN  &trans
-                              &trans          &trans     &trans       &trans  &trans   &trans
+&trans  &trans  &trans        &trans          &trans     &StopWork     &kp F1  &kp F2   &kp F3   &kp F4   &kp SQT       &trans
+&trans  &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &TestStart    &kp F5  &kp F6   &kp F7   &kp F8   &kp INSERT    &trans
+&trans  &trans  &trans        &trans          &trans     &trans        &kp F9  &kp F10  &kp F11  &kp F12  &kp LEFT_WIN  &trans
+                              &trans          &trans     &trans        &trans  &trans   &trans
             >;
         };
 
         Special {
-display-name = "Special";
             bindings = <
-&trans  &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp DOLLAR       &kp PERCENT   &kp LCTRL             &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans        &trans                &trans                   &trans  &trans  &trans
+&trans  &trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans                   &trans  &trans     &trans          &trans        &trans  &trans
+&trans  &trans  &kp DOLLAR       &kp PERCENT   &kp LCTRL             &trans                   &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LEFT_ALT  &trans  &trans
+&trans  &trans  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &trans     &trans          &trans        &trans  &trans
+                                 &trans        &trans                &trans                   &trans  &trans     &trans
             >;
         };
     };
