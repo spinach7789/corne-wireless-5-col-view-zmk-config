@@ -101,17 +101,32 @@
 
         Com_NUM {
             bindings = <&kp LS(NUMBER_3)>;
-            key-positions = <5 6>;
+            key-positions = <5 4>;
         };
 
         Com_big {
             bindings = <&Big>;
-            key-positions = <17 18>;
+            key-positions = <16 17>;
         };
 
         Com_small {
             bindings = <&Small>;
-            key-positions = <29 30>;
+            key-positions = <29 28>;
+        };
+
+        ToNav {
+            bindings = <&tog 2>;
+            key-positions = <38 37>;
+        };
+
+        ToFunc {
+            bindings = <&tog 3>;
+            key-positions = <38 36>;
+        };
+
+        ToNum {
+            bindings = <&tog 1>;
+            key-positions = <39 41>;
         };
     };
 
